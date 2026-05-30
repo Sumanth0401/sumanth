@@ -46,14 +46,14 @@ npm run dev             # runs Express (:5000) and Vite (:5173) together
 
 Or run them separately:
 ```bash
-npm --prefix server run dev      # backend on :5000
-npm --prefix client run dev      # frontend on :5173 (proxies /api → :5000)
+npm --prefix server run dev      # backend on :5050
+npm --prefix client run dev      # frontend on :5173 (proxies /api → :5050)
 ```
 
 ### Production build
 ```bash
 npm run build       # builds the React app into client/dist
-npm start           # Express serves the API + the built client on :5000
+npm start           # Express serves the API + the built client on :5050
 ```
 
 ---

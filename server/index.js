@@ -22,7 +22,7 @@ import fs from "node:fs";
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 dotenv.config({ path: path.join(__dirname, "..", ".env") });
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5050;
 const GEMINI_KEY = (process.env.GEMINI_API_KEY || "").trim();
 const GEMINI_MODEL = (process.env.GEMINI_MODEL || "gemini-2.0-flash").trim();
 const FIREBASE_API_KEY = (process.env.FIREBASE_API_KEY ||
