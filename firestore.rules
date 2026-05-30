@@ -1,0 +1,54 @@
+rules_version = '2';
+// WorkFlow Firestore security rules.
+// Publish in Firebase Console → Firestore Database → Rules → Publish.
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() { return request.auth != null; }
+    function uid() { return request.auth.uid; }
+    function userDoc(id) { return get(/databases/$(database)/documents/users/$(id)); }
+    function myRole() { return userDoc(uid()).data.role; }
+    function isManager() { return signedIn() && myRole() == 'manager'; }
+
+    // ---- users ----
+    // Anyone signed in can read user profiles (needed for assignee names,
+    // manager lookups, team views). A user may only write their own profile.
+    match /users/{userId} {
+      allow read: if signedIn();
+      allow create: if signedIn() && userId == uid();
+      allow update, delete: if signedIn() && userId == uid();
+    }
+
+    // ---- tasks ----
+    match /tasks/{taskId} {
+      // assignee, assigner, or any manager may read.
+      allow read: if signedIn() && (
+        resource.data.assigneeId == uid() ||
+        resource.data.assignerId == uid() ||
+        isManager()
+      );
+      // only managers create tasks.
+      allow create: if isManager() && request.resource.data.assignerId == uid();
+      // managers can edit anything; the assignee may update (e.g. status).
+      allow update: if signedIn() && (
+        isManager() || resource.data.assigneeId == uid()
+      );
+      allow delete: if isManager();
+
+      // ---- work logs (subcollection) ----
+      match /logs/{logId} {
+        allow read: if signedIn();
+        allow create: if signedIn() &&
+          (request.resource.data.userId == uid() || isManager());
+        allow update, delete: if false; // logs are immutable
+      }
+    }
+
+    // ---- audit trail (append-only) ----
+    match /audit/{auditId} {
+      allow read: if signedIn();
+      allow create: if signedIn() && request.resource.data.actorId == uid();
+      allow update, delete: if false; // tamper-resistant
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"import ast; ast.parse\\(open\\('server.py'\\).read\\(\\)\\); print\\('server.py: syntax OK'\\)\")",
+      "Bash(node -e \"1\")",
+      "Bash(pkill -f \"python3 server.py\")",
+      "Bash(rm -rf /tmp/ws_extract /tmp/ws.docx /tmp/ws.txt)",
+      "Bash(gh auth *)",
+      "Bash(npm -v)",
+      "Bash(ls -A1)",
+      "Bash(exit 0)",
+      "Bash(exit 9)"
+    ]
+  }
+}
