@@ -1,15 +1,11 @@
 // Small shared presentational bits.
-export function Logo({ size = 28 }) {
+export function Logo({ size = 22 }) {
+  // concentric "target" mark — matches the Liquid Glass brand
   return (
-    <svg viewBox="0 0 32 32" width={size} height={size} aria-hidden="true">
-      <defs>
-        <linearGradient id="wf-lg" x1="0" y1="0" x2="1" y2="1">
-          <stop offset="0" stopColor="#5eead4" />
-          <stop offset="1" stopColor="#a78bfa" />
-        </linearGradient>
-      </defs>
-      <path d="M5 7l5 18 6-13 6 13 5-18" fill="none" stroke="url(#wf-lg)"
-        strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+    <svg viewBox="0 0 24 24" width={size} height={size} fill="none" stroke="#fff"
+      strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <circle cx="12" cy="12" r="9" />
+      <circle cx="12" cy="12" r="3" fill="#fff" stroke="none" />
     </svg>
   );
 }
@@ -17,12 +13,13 @@ export function Logo({ size = 28 }) {
 export function BrandSplash() {
   return (
     <div className="splash">
-      <div className="brand big">
-        <div className="brand-mark"><Logo /></div>
-        <div className="brand-text">
-          <span className="brand-name">WorkFlow</span>
-          <span className="brand-sub">loading…</span>
+      <div className="glass col center gap14" style={{ padding: "34px 44px" }}>
+        <div className="brand-mark" style={{ width: 48, height: 48, borderRadius: 14 }}><Logo size={26} /></div>
+        <div className="col center gap4">
+          <span className="brand-name" style={{ fontSize: 22 }}>WorkFlow</span>
+          <span className="brand-sub">Accountability OS</span>
         </div>
+        <Loading />
       </div>
     </div>
   );

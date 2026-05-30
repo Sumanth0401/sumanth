@@ -1,4 +1,4 @@
-# --- secrets (NEVER commit) ---
+# Secrets — never commit
 .env
 .env.local
 .env.*.local
@@ -6,26 +6,25 @@
 *service-account*.json
 firebase-adminsdk*.json
 
-# --- dependencies ---
+# Dependencies
 node_modules/
 **/node_modules/
 
-# --- build output ---
+# Build output
 dist/
 client/dist/
 build/
 
-# --- logs / caches ---
+# Logs & caches
 *.log
-npm-debug.log*
 .vite/
 .cache/
 
-# --- os / editor ---
+# OS / editor
 .DS_Store
 .idea/
 .vscode/
 *.swp
 
-# --- legacy local db ---
+# Misc
 *.db
