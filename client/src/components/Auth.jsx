@@ -48,7 +48,7 @@ export default function Auth({ onReady, theme, onToggleTheme }) {
         <div className="auth-brand">
           <div className="brand-mark"><Logo size={26} /></div>
           <div className="col center gap4">
-            <span className="brand-name" style={{ fontSize: 24 }}>WorkFlow</span>
+            <span className="brand-name" style={{ fontSize: 24 }}>TaskFlow</span>
             <span className="brand-sub">accountability, not just tracking</span>
           </div>
         </div>

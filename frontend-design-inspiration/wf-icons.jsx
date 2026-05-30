@@ -1,5 +1,5 @@
 /* =============================================================
-   WorkFlow — icon set (hairline SF-Symbols-ish) + small UI atoms
+   TaskFlow — icon set (hairline SF-Symbols-ish) + small UI atoms
    ============================================================= */
 
 const ICONS = {

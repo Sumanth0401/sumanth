@@ -109,8 +109,7 @@ export default function Shell({ profile, onLogout, theme, onToggleTheme }) {
         <div className="brand">
           <div className="brand-mark"><Logo size={20} /></div>
           <div className="brand-text">
-            <span className="brand-name">WorkFlow</span>
-            <span className="brand-sub">Accountability OS</span>
+            <span className="brand-name">TaskFlow</span>
           </div>
         </div>
 
@@ -123,7 +122,7 @@ export default function Shell({ profile, onLogout, theme, onToggleTheme }) {
           </button>
         ))}
 
-        {isMgr && (
+        {/* {isMgr && (
           <>
             <div className="nav-label">Insights</div>
             <button className="nav-item" onClick={genSummary} title="Where's My Team?">
@@ -131,7 +130,7 @@ export default function Shell({ profile, onLogout, theme, onToggleTheme }) {
               <span className="nav-text">Where's My Team?</span>
             </button>
           </>
-        )}
+        )} */}
 
         <div className="sidebar-foot">
           <button className="nav-item" onClick={onLogout} title="Sign out">

@@ -1,5 +1,5 @@
 /**
- * WorkFlow — Express backend (the AI layer).
+ * TaskFlow — Express backend (the AI layer).
  *
  * Responsibilities:
  *   - Verify the caller's Firebase ID token (via Google Identity Toolkit REST,
@@ -205,7 +205,7 @@ if (fs.existsSync(clientDist)) {
 }
 
 app.listen(PORT, () => {
-  console.log(`\n  ▰▰▰ WorkFlow API — http://localhost:${PORT} ▰▰▰`);
+  console.log(`\n  ▰▰▰ TaskFlow API — http://localhost:${PORT} ▰▰▰`);
   console.log(`  Gemini: ${GEMINI_KEY ? "key loaded ✓" : "NO KEY (add GEMINI_API_KEY to .env)"}  model: ${GEMINI_MODEL}`);
   console.log(`  Firebase token verification: ${FIREBASE_API_KEY ? "ready ✓" : "missing key"}\n`);
 });

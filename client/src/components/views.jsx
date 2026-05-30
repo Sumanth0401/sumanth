@@ -10,12 +10,6 @@ import {
 function Kpi({ icon, tint, val, label, sub, ring, danger }) {
   return (
     <div className="glass kpi">
-      <div className="kpi-top">
-        <div className="kpi-ico" style={{ background: `color-mix(in srgb, ${tint} 16%, transparent)`, color: tint }}>
-          <Icon name={icon} size={19} />
-        </div>
-        {ring != null ? <Ring value={ring} size={42} /> : <Icon name="trend" size={16} style={{ color: "var(--text-3)" }} />}
-      </div>
       <div className="kpi-val" style={danger ? { color: "var(--c-red)" } : null}>{val}</div>
       <div className="col gap4">
         <div className="kpi-label">{label}</div>

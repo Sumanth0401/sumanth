@@ -1,8 +1,8 @@
 {
-  "name": "workflow",
+  "name": "TaskFlow",
   "version": "1.0.0",
   "private": true,
-  "description": "WorkFlow — AI-Powered, Role-Based Employee Task & Accountability Platform (React + Express + Firebase + Gemini)",
+  "description": "TaskFlow — AI-Powered, Role-Based Employee Task & Accountability Platform (React + Express + Firebase + Gemini)",
   "scripts": {
     "install:all": "npm install && npm --prefix server install && npm --prefix client install",
     "dev": "concurrently -n server,client -c cyan,magenta \"npm --prefix server run dev\" \"npm --prefix client run dev\"",

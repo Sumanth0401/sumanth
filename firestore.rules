@@ -1,5 +1,5 @@
 rules_version = '2';
-// WorkFlow Firestore security rules.
+// TaskFlow Firestore security rules.
 // Publish in Firebase Console → Firestore Database → Rules → Publish.
 service cloud.firestore {
   match /databases/{database}/documents {

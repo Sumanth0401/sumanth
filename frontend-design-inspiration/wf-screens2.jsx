@@ -1,5 +1,5 @@
 /* =============================================================
-   WorkFlow — Task detail, AI brief, employee screens, modals
+   TaskFlow — Task detail, AI brief, employee screens, modals
    ============================================================= */
 
 // ---- local AI heuristic for live log verification ----
@@ -92,7 +92,7 @@ function TaskDetail({ taskId, ctx, onClose }) {
           <div className="row gap8"><div className="section-title">Audit trail</div><span className="pill pill-soft" style={{ fontSize:11 }}>tamper-resistant</span></div>
           <div className="col" style={{ position:"relative", paddingLeft:6 }}>
             {t.audit.map((a,i) => {
-              const who = a.who==="system" ? { name:"WorkFlow", initials:"AI", color:["#0A84FF","#5E5CE6"] } : byId(a.who);
+              const who = a.who==="system" ? { name:"TaskFlow", initials:"AI", color:["#0A84FF","#5E5CE6"] } : byId(a.who);
               const last = i===t.audit.length-1;
               return (
                 <div key={i} className="row gap12" style={{ alignItems:"flex-start" }}>

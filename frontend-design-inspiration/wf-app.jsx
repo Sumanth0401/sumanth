@@ -1,5 +1,5 @@
 /* =============================================================
-   WorkFlow — App shell, routing, state, Tweaks
+   TaskFlow — App shell, routing, state, Tweaks
    ============================================================= */
 
 const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
@@ -111,8 +111,8 @@ function App() {
           <div className="brand">
             <div className="brand-mark"><Icon name="target" size={20} fill="none" style={{ color: "#fff" }} /></div>
             <div className="col brand-text">
-              <span className="brand-name">WorkFlow</span>
-              <span className="brand-sub">Accountability OS</span>
+              <span className="brand-name">TaskFlow</span>
+              <span className="brand-sub"></span>
             </div>
           </div>
 
@@ -125,7 +125,7 @@ function App() {
             </div>
           ))}
 
-          {role === "manager" && (
+          {/* {role === "manager" && (
             <>
               <div className="nav-label">Insights</div>
               <div className="nav-item" onClick={ctx.openBrief}>
@@ -133,7 +133,7 @@ function App() {
                 <span className="nav-text">Where's My Team?</span>
               </div>
             </>
-          )}
+          )} */}
 
           <div className="sidebar-foot">
             <div className="nav-item" onClick={() => switchRole(role === "manager" ? "employee" : "manager")} title="Switch role">

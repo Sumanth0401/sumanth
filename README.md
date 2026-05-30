@@ -1,10 +1,22 @@
-# WorkFlow ⚡
+# TaskFlow ⚡
 
 **An AI-Powered, Role-Based Employee Task & Accountability Platform.**
 
 Replaces spreadsheets and scattered chat updates with a single, structured, transparent
 system where every task, update and outcome is tracked, verifiable, and attributed —
 enhanced by an AI layer (Google Gemini) that verifies work logs and keeps managers informed.
+
+## Screenshots
+
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+  <img src="assets/sumanth1.JPG" width="48%" />
+  <img src="assets/sumanth2.JPG" width="48%" />
+  <img src="assets/sumanth3.JPG" width="48%" />
+  <img src="assets/sumanth4.JPG" width="48%" />
+  <img src="assets/sumanth5.JPG" width="48%" />
+  <img src="assets/sumanth6.JPG" width="48%" />
+  <img src="assets/sumanth7.JPG" width="48%" />
+</div>
 
 ## Stack
 - **React** (Vite) — frontend

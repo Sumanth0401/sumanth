@@ -1,8 +1,8 @@
 {
-  "name": "workflow-server",
+  "name": "TaskFlow-server",
   "version": "1.0.0",
   "private": true,
-  "description": "WorkFlow Express backend — Gemini AI layer + Firebase token verification",
+  "description": "TaskFlow Express backend — Gemini AI layer + Firebase token verification",
   "type": "module",
   "main": "index.js",
   "scripts": {
