@@ -9,13 +9,13 @@ enhanced by an AI layer (Google Gemini) that verifies work logs and keeps manage
 ## Screenshots
 
 <div style="display: flex; flex-wrap: wrap; gap: 10px;">
-  <img src="assets/sumanth1.JPG" width="48%" />
-  <img src="assets/sumanth2.JPG" width="48%" />
-  <img src="assets/sumanth3.JPG" width="48%" />
-  <img src="assets/sumanth4.JPG" width="48%" />
-  <img src="assets/sumanth5.JPG" width="48%" />
-  <img src="assets/sumanth6.JPG" width="48%" />
-  <img src="assets/sumanth7.JPG" width="48%" />
+  <img src="assets/sumanth1.JPG"  />
+  <img src="assets/sumanth2.JPG"  />
+  <img src="assets/sumanth3.JPG"  />
+  <img src="assets/sumanth4.JPG"  />
+  <img src="assets/sumanth5.JPG"  />
+  <img src="assets/sumanth6.JPG"  />
+  <img src="assets/sumanth7.JPG"  />
 </div>
 
 ## Stack
@@ -38,8 +38,8 @@ The repo expects a `.env` in the project root (already gitignored — never comm
 
 ```bash
 GEMINI_API_KEY=your_gemini_key          # required for AI features
-GEMINI_MODEL=gemini-2.0-flash           # optional
-FIREBASE_API_KEY=AIzaSyCx1HISQk4RQaR5UDN4oljdoFV7tNdwXyg   # public web key, for token verification
+GEMINI_MODEL=gemini-3.5-flash           # optional
+FIREBASE_API_KEY=   # public web key, for token verification
 PORT=5000
 ```
 See `.env.example`. (The Firebase **web** config in `client/src/firebase.js` is public by
